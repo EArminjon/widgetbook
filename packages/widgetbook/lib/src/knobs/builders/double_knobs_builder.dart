@@ -16,6 +16,7 @@ class DoubleKnobsBuilder {
   double slider({
     required String label,
     String? description,
+    String? group,
     double initialValue = 0,
     double min = 0,
     double max = 20,
@@ -26,6 +27,7 @@ class DoubleKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         min: min,
         max: max,
         divisions: divisions,
@@ -38,6 +40,7 @@ class DoubleKnobsBuilder {
   double input({
     required String label,
     String? description,
+    String? group,
     double initialValue = 0,
   }) {
     return onKnobAdded(
@@ -45,6 +48,7 @@ class DoubleKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
       ),
     )!;
   }
@@ -66,6 +70,7 @@ class DoubleOrNullKnobsBuilder {
   double? slider({
     required String label,
     String? description,
+    String? group,
     double? initialValue,
     double min = 0,
     double max = 20,
@@ -76,6 +81,7 @@ class DoubleOrNullKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         min: min,
         max: max,
         divisions: divisions,
@@ -88,6 +94,7 @@ class DoubleOrNullKnobsBuilder {
   double? input({
     required String label,
     String? description,
+    String? group,
     double? initialValue,
   }) {
     return onKnobAdded(
@@ -95,6 +102,7 @@ class DoubleOrNullKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
       ),
     );
   }

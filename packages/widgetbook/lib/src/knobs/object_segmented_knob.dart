@@ -10,6 +10,7 @@ class ObjectSegmentedKnob<T> extends Knob<T?> {
     required super.initialValue,
     required this.options,
     super.description,
+    super.group,
     this.labelBuilder,
   });
 
@@ -18,6 +19,7 @@ class ObjectSegmentedKnob<T> extends Knob<T?> {
     required super.initialValue,
     required this.options,
     super.description,
+    super.group,
     this.labelBuilder,
   }) : super(isNullable: true);
 

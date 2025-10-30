@@ -9,12 +9,14 @@ class IntInputKnob extends Knob<int?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   });
 
   IntInputKnob.nullable({
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   }) : super(isNullable: true);
 
   @override

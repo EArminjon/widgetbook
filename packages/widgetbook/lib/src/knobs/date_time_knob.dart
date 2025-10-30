@@ -9,6 +9,7 @@ class DateTimeKnob extends Knob<DateTime?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
     required this.start,
     required this.end,
   });
@@ -17,6 +18,7 @@ class DateTimeKnob extends Knob<DateTime?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
     required this.start,
     required this.end,
   }) : super(isNullable: true);

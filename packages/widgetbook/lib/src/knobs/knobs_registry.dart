@@ -36,7 +36,17 @@ class KnobsRegistry extends ChangeNotifier with MapMixin<String, Knob> {
     Knob<T?> knob,
     Map<String, String> queryGroup,
   ) {
-    _registry[knob.label] = knob;
+    final list = _registry.values.toList();
+    final lastIndex = knob.group == null ? -1 : list.lastIndexWhere((item) => item.group == knob.group);
+
+    if (lastIndex != -1 && list[lastIndex].label != knob.label) {
+      list.insert(lastIndex + 1, knob);
+      _registry
+        ..clear()
+        ..addEntries(list.map((e) => MapEntry(e.label, e)));
+    } else {
+      _registry[knob.label] = knob;
+    }
 
     return knob.valueFromQueryGroup(queryGroup);
   }

@@ -19,6 +19,7 @@ class ObjectKnobsBuilder {
     required List<T> options,
     T? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
   }) {
     assert(options.isNotEmpty, 'Must specify at least one option');
@@ -27,6 +28,7 @@ class ObjectKnobsBuilder {
         label: label,
         initialValue: initialOption ?? options.first,
         description: description,
+        group: group,
         options: options,
         labelBuilder: labelBuilder,
       ),
@@ -40,6 +42,7 @@ class ObjectKnobsBuilder {
     required List<T> options,
     T? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
   }) {
     assert(options.isNotEmpty, 'Must specify at least one option');
@@ -49,6 +52,7 @@ class ObjectKnobsBuilder {
         initialValue: initialOption ?? options.first,
         options: options,
         description: description,
+        group: group,
         labelBuilder: labelBuilder,
       ),
     )!;
@@ -72,6 +76,7 @@ class ObjectOrNullKnobsBuilder {
     required List<T> options,
     T? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
   }) {
     assert(options.isNotEmpty, 'Must specify at least one option');
@@ -80,6 +85,7 @@ class ObjectOrNullKnobsBuilder {
         label: label,
         initialValue: initialOption,
         description: description,
+        group: group,
         options: options,
         labelBuilder: labelBuilder,
       ),
@@ -93,6 +99,7 @@ class ObjectOrNullKnobsBuilder {
     required List<T> options,
     T? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
   }) {
     assert(options.isNotEmpty, 'Must specify at least one option');
@@ -102,6 +109,7 @@ class ObjectOrNullKnobsBuilder {
         initialValue: initialOption,
         options: options,
         description: description,
+        group: group,
         labelBuilder: labelBuilder,
       ),
     );

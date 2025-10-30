@@ -18,6 +18,7 @@ class IterableKnobsBuilder {
     required Iterable<T> options,
     Iterable<T>? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
     bool emptySelectionAllowed = true,
   }) {
@@ -28,6 +29,7 @@ class IterableKnobsBuilder {
         initialValue:
             initialOption ?? {if (!emptySelectionAllowed) options.first},
         description: description,
+        group: group,
         options: options,
         labelBuilder: labelBuilder,
         emptySelectionAllowed: emptySelectionAllowed,
@@ -53,6 +55,7 @@ class IterableOrNullKnobsBuilder {
     required Iterable<T> options,
     Iterable<T>? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
     bool emptySelectionAllowed = true,
   }) {
@@ -62,6 +65,7 @@ class IterableOrNullKnobsBuilder {
         label: label,
         initialValue: initialOption,
         description: description,
+        group: group,
         options: options,
         labelBuilder: labelBuilder,
         emptySelectionAllowed: emptySelectionAllowed,

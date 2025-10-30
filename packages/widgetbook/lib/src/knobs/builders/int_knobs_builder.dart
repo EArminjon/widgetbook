@@ -16,6 +16,7 @@ class IntKnobsBuilder {
   int input({
     required String label,
     String? description,
+    String? group,
     int initialValue = 0,
   }) {
     return onKnobAdded(
@@ -23,6 +24,7 @@ class IntKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
       ),
     )!;
   }
@@ -32,6 +34,7 @@ class IntKnobsBuilder {
   int slider({
     required String label,
     String? description,
+    String? group,
     int initialValue = 0,
     int min = 0,
     int max = 20,
@@ -42,6 +45,7 @@ class IntKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         min: min,
         max: max,
         divisions: divisions,
@@ -65,6 +69,7 @@ class IntOrNullKnobsBuilder {
   int? input({
     required String label,
     String? description,
+    String? group,
     int? initialValue,
   }) {
     return onKnobAdded(
@@ -72,6 +77,7 @@ class IntOrNullKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
       ),
     );
   }
@@ -81,6 +87,7 @@ class IntOrNullKnobsBuilder {
   int? slider({
     required String label,
     String? description,
+    String? group,
     int? initialValue,
     int min = 0,
     int max = 20,
@@ -91,6 +98,7 @@ class IntOrNullKnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         min: min,
         max: max,
         divisions: divisions,

@@ -32,6 +32,7 @@ abstract class Knob<T> extends FieldsComposable<T> {
       'It defaults to [value == null] instead of [false]',
     )
     bool isNull = false,
+    this.group,
   }) : this.initialValue = (initialValue ?? value) as T,
        super(name: label);
 
@@ -40,6 +41,11 @@ abstract class Knob<T> extends FieldsComposable<T> {
   /// This value is used when the knob is first displayed or when no value
   /// has been set by the user.
   final T initialValue;
+
+  /// An optional grouping identifier for this knob.
+  ///
+  /// This value is used to group related knobs together in the UI.
+  final String? group;
 
   /// The display label for this knob.
   ///

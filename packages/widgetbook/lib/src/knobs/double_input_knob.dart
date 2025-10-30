@@ -9,12 +9,14 @@ class DoubleInputKnob extends Knob<double?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   });
 
   DoubleInputKnob.nullable({
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   }) : super(isNullable: true);
 
   @override

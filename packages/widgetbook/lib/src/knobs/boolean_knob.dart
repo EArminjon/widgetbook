@@ -9,12 +9,14 @@ class BooleanKnob extends Knob<bool?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   });
 
   BooleanKnob.nullable({
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   }) : super(isNullable: true);
 
   @override

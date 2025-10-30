@@ -9,6 +9,7 @@ class StringKnob extends Knob<String?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
     this.maxLines,
   });
 
@@ -16,6 +17,7 @@ class StringKnob extends Knob<String?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
     this.maxLines,
   }) : super(isNullable: true);
 

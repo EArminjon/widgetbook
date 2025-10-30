@@ -69,12 +69,14 @@ class KnobsBuilder {
   bool boolean({
     required String label,
     String? description,
+    String? group,
     bool initialValue = false,
   }) {
     return onKnobAdded(
       BooleanKnob(
         label: label,
         description: description,
+        group: group,
         initialValue: initialValue,
       ),
     )!;
@@ -85,12 +87,14 @@ class KnobsBuilder {
   bool? booleanOrNull({
     required String label,
     String? description,
+    String? group,
     bool? initialValue,
   }) {
     return onKnobAdded(
       BooleanKnob.nullable(
         label: label,
         description: description,
+        group: group,
         initialValue: initialValue,
       ),
     );
@@ -103,6 +107,7 @@ class KnobsBuilder {
     Color initialValue = Colors.white,
     ColorSpace initialColorSpace = ColorSpace.hex,
     String? description,
+    String? group,
   }) {
     return onKnobAdded(
       ColorKnob(
@@ -110,6 +115,7 @@ class KnobsBuilder {
         initialValue: initialValue,
         initialColorSpace: initialColorSpace,
         description: description,
+        group: group,
       ),
     )!;
   }
@@ -121,6 +127,7 @@ class KnobsBuilder {
     Color? initialValue,
     ColorSpace initialColorSpace = ColorSpace.hex,
     String? description,
+    String? group,
   }) {
     return onKnobAdded(
       ColorKnob.nullable(
@@ -128,6 +135,7 @@ class KnobsBuilder {
         initialValue: initialValue,
         initialColorSpace: initialColorSpace,
         description: description,
+        group: group,
       ),
     );
   }
@@ -137,6 +145,7 @@ class KnobsBuilder {
   String string({
     required String label,
     String? description,
+    String? group,
     String initialValue = '',
     $int? maxLines = 1,
   }) {
@@ -145,6 +154,7 @@ class KnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         maxLines: maxLines,
       ),
     )!;
@@ -155,6 +165,7 @@ class KnobsBuilder {
   String? stringOrNull({
     required String label,
     String? description,
+    String? group,
     String? initialValue,
     $int? maxLines = 1,
   }) {
@@ -163,6 +174,7 @@ class KnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         maxLines: maxLines,
       ),
     );
@@ -175,6 +187,7 @@ class KnobsBuilder {
     required List<T> options,
     T? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T>? labelBuilder,
   }) {
     assert(options.isNotEmpty, 'Must specify at least one option');
@@ -183,6 +196,7 @@ class KnobsBuilder {
         label: label,
         initialValue: initialOption ?? options.first,
         description: description,
+        group: group,
         options: options,
         labelBuilder: labelBuilder,
       ),
@@ -196,6 +210,7 @@ class KnobsBuilder {
     required List<T?> options,
     T? initialOption,
     String? description,
+    String? group,
     LabelBuilder<T?>? labelBuilder,
   }) {
     return onKnobAdded(
@@ -203,6 +218,7 @@ class KnobsBuilder {
         label: label,
         initialValue: initialOption,
         description: description,
+        group: group,
         options: options,
         labelBuilder: labelBuilder,
       ),
@@ -215,12 +231,14 @@ class KnobsBuilder {
     required String label,
     Duration initialValue = Duration.zero,
     String? description,
+    String? group,
   }) {
     return onKnobAdded(
       DurationKnob(
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
       ),
     )!;
   }
@@ -231,12 +249,14 @@ class KnobsBuilder {
     required String label,
     Duration? initialValue,
     String? description,
+    String? group,
   }) {
     return onKnobAdded(
       DurationKnob.nullable(
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
       ),
     );
   }
@@ -247,6 +267,7 @@ class KnobsBuilder {
     required String label,
     required DateTime initialValue,
     String? description,
+    String? group,
     required DateTime start,
     required DateTime end,
   }) {
@@ -255,6 +276,7 @@ class KnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         start: start,
         end: end,
       ),
@@ -267,6 +289,7 @@ class KnobsBuilder {
     required String label,
     DateTime? initialValue,
     String? description,
+    String? group,
     required DateTime start,
     required DateTime end,
   }) {
@@ -275,6 +298,7 @@ class KnobsBuilder {
         label: label,
         initialValue: initialValue,
         description: description,
+        group: group,
         start: start,
         end: end,
       ),

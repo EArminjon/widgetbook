@@ -9,12 +9,14 @@ class DurationKnob extends Knob<Duration?> {
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   });
 
   DurationKnob.nullable({
     required super.label,
     required super.initialValue,
     super.description,
+    super.group,
   }) : super(isNullable: true);
 
   @override

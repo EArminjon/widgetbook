@@ -10,6 +10,7 @@ class IterableSegmentedKnob<T> extends Knob<Iterable<T>?> {
     required super.initialValue,
     required this.options,
     super.description,
+    super.group,
     this.labelBuilder,
     this.emptySelectionAllowed = true,
   });
@@ -19,6 +20,7 @@ class IterableSegmentedKnob<T> extends Knob<Iterable<T>?> {
     required super.initialValue,
     required this.options,
     super.description,
+    super.group,
     this.labelBuilder,
     this.emptySelectionAllowed = true,
   }) : super(isNullable: true);
